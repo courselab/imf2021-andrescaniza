@@ -26,3 +26,5 @@ b) Executando o programa gerado
 Colocamos esse codigo dentro do arquivo fix.S e corrigimos o erro
 
 Reescrevemos o codigo dentro do Makefile para gerar o executavel usando o fix.o
+
+Criamos uma lib com o bypass.o e o fix.o
