@@ -11,7 +11,7 @@ libdecrypt.so : bypass.o fix.o
 	gcc -m32 --shared $^ -o $@
 
 clean: 
-	rm -f decode bypass.o fix.o
+	rm -f decode bypass.o fix.o libdecrypt.so
 
 dist :
 	tar zcvf decode.tar.gz Makefile *.c *.o *.so *.S decode
