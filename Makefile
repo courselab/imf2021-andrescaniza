@@ -13,5 +13,10 @@ libdecrypt.so : bypass.o fix.o
 clean: 
 	rm -f decode bypass.o fix.o libdecrypt.so
 
+DISTNAME=decode-fixed
+
 dist :
-	tar zcvf decode.tar.gz Makefile *.c *.o *.so *.S decode
+	make clean
+	rm -rf $(DISTNAME) ; mkdir $(DISTNAME)
+	cp *.o *.so *.c *.S Makefile $(DISTNAME)
+	tar zcvf $(DISTNAME).tar.gz $(DISTNAME)
